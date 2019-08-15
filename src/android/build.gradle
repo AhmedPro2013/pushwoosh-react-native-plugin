@@ -27,7 +27,7 @@ apply plugin: 'com.android.library'
 def DEFAULT_COMPILE_SDK_VERSION             = 28
 def DEFAULT_TARGET_SDK_VERSION              = 28
 def DEFAULT_MIN_SDK_VERSION             = 16
-def DEFAULT_SUPPORT_LIB_VERSION             = "28.0.0"
+def DEFAULT_SUPPORT_LIB_VERSION             = "1.0.2"
 
 android {
     compileSdkVersion rootProject.hasProperty('compileSdkVersion') ? rootProject.compileSdkVersion : DEFAULT_COMPILE_SDK_VERSION
@@ -68,9 +68,9 @@ dependencies {
     implementation "com.pushwoosh:pushwoosh-badge:${pushwoosh}"
     implementation "com.pushwoosh:pushwoosh-inbox:${pushwoosh}"
     implementation "com.pushwoosh:pushwoosh-inbox-ui:${pushwoosh}"
-    implementation "com.android.support:appcompat-v7:$supportLibVersion"
-    implementation "com.android.support:recyclerview-v7:$supportLibVersion"
-    api "com.android.support:design:$supportLibVersion"
+    implementation 'androidx.appcompat:appcompat:$supportLibVersion'
+    implementation "androidx.recyclerview:recyclerview:$supportLibVersion"
+    api "com.google.android.material:material:$supportLibVersion"
     implementation "com.android.support.constraint:constraint-layout:1.0.2"
     implementation "com.github.bumptech.glide:glide:4.7.1"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:1.1.60"
